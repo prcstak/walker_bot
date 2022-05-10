@@ -1,0 +1,11 @@
+<launch>
+    <param name="/use_sim_time" value="true" />
+    <arg name="model" default="waffle"/>
+    
+    <!-- Launch turtle bot world -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_house.launch"/>
+
+    <!-- Launch stopper node -->
+    <node name="walker" pkg="walker_bot" type="walker" output="screen"/>
+</launch>
+
